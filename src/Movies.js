@@ -6,6 +6,7 @@ const Header = styled.header`
 	display: flex;
 	justify-content: center;
 	text-align: center;
+	\margin: 0.5rem;
 	h1 {
 		color: aqua;
 		text-shadow: 0.1rem 0.1rem 0 rgb(233, 25, 164);
@@ -42,10 +43,15 @@ const Movie = styled.section`
 		padding: 0.4rem;
 		background-color: rgb(248, 0, 186);
 	}
-	h2 {
+	h2, h3 {
     font-family: 'Press Start 2P', cursive;
     font
-	}
+  }
+  @media (max-width: 500px) {
+    aside {
+      flex-direction: column;
+    }
+  }
 `
 
 class Movies extends Component {
@@ -60,6 +66,7 @@ class Movies extends Component {
 						return (
 							<Movie key={result.title}>
 								<h2>{result.title}</h2>
+								{/* <h3>{result.release_date}</h3> */}
 								<aside>
 									<span>
 										<img
