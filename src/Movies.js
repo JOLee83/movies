@@ -61,12 +61,14 @@ class Movies extends Component {
 							<Movie key={result.title}>
 								<h2>{result.title}</h2>
 								<aside>
-									<img
-										alt={result.title}
-										src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2${
-											result.poster_path
-										}`}
-									/>
+									<span>
+										<img
+											alt={result.title}
+											src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2${
+												result.poster_path
+											}`}
+										/>
+									</span>
 									<p>{result.overview}</p>
 								</aside>
 							</Movie>
